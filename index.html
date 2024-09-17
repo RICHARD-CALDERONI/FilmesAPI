@@ -1,84 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Popular Movies</title>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo Api - Filmes</title>
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapiscom">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="inputs-inicio">
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/cabecalho.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-  </head>
-  <body>
-    <header class="cabecalho">
-      <h1 class="cabecalho__titulo">Filmes Populares</h1>
-      
-      
-      <div class="cabecalho__pesquisa">
-        <input
-          type="text"
-          class="cabecalho__pesquisa-input"
-          placeholder="Digite algum filme para pesquisar..."
-        />
-        <span class="cabecalho__pesquisa-lupa">
-          <img src="img/search-icon.svg" alt="" />
-        </span>
-      </div>
-      
-      
-      
-
-      <label class="cabecalho__checkbox">
-        <input type="checkbox" id="cabecalho__checkbox"/>
-        Mostrar meus filmes favoritos apenas
-      </label>
-    </header>
-
-    <section id="filmes">
+        <h1>Filmes Populares</h1>
+        
+        <input type="text" class="input-filme">
+        <input type="checkbox" name="Mostrar apenas filmes favoritos" id="filmes-favoritos">
     </section>
-    <section class="card__lista-vazia">Você ainda não adicionou nenhum filme a sua lista de favoritos!</section>
-
-
-
-      <section class="cards">
         
-        
-        <div class="cards__parte1">
-        <img src="img/image 1.png" alt="Capa" class="cards__parte1-capa" />
-      </div>
-      <div class="cards__parte2">
-        <h2 class="cards__parte2-titulo">Titulo Completo (Ano)</h2>
-        <div class="cards__parte2-details">
-          <div>
-            <img src="img/Star.svg" alt="star" class="cards__parte2-icon" />
-            <h2 class="cards__parte2-text">9.2</h2>
-          </div>
-          <div>
-            <img src="img/Heart.svg" alt="star" class="cards__parte2-icon" />
-            <h2 class="cards__parte2-text">Favoritar</h2>
-          </div>
+    <main>
+        <div class="container-filme">
+            <div class="card-1">
+                <div class="img-filme"></div>
+                <div class="nota-filme"></div>
+                <div class="favoritado-filme"></div>
+            </div>
+
+
+            <div class="card-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab at minus cum ut incidunt veniam optio iusto asperiores quisquam, nemo rem omnis modi est excepturi quas facere, ea non fugiat.
+            </div>
         </div>
-      </div>
-      <div class="cards__parte3">
-        <p class="cards__parte3-texto">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </p>
-      </div>
-      
-    </section>
+    </main>
 
-    
-    <script type="module" src="js/main.js"></script>
-  </body>
-  </html>
+</body>
+</html>
