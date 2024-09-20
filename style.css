@@ -39,10 +39,22 @@ h1 {
     display: flex;
     justify-content: center;
     padding: 1rem 0 4rem;
+
 }
 
 .input-filme {
-    border-radius: 15%;
-    height: 3rem;
+    border-radius: 5%;
+    height: 4rem;
     width: 50%;
+    border: transparent;
+    background: rgba(112, 110, 168, 1);
 }
+
+.container-filme{
+    display: flex;
+}
+
+.nota-filme{
+    display: flex;
+}
+
