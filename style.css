@@ -8,6 +8,8 @@
 
 :root {
     --bg-color: #17162E;
+    --bg-container-movie: #1D1C3B;
+
     --fc-primary: #ffffff;
     font-size: 62.5%;
 }
@@ -51,10 +53,39 @@ h1 {
 }
 
 .container-filme{
+    background: var(--bg-container-movie);
+    border-radius: 5%;
+    
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-filme{
+    border-radius: 100%;
+    padding: 0 1rem;
+    width: 30%;
+}
+
+.card-1{
+    padding: 2rem;
+    width: 30%;
+    text-align: center;    
+}
+
+.card-1 h4{
+    margin: 0 0 3rem 0;
+}
+
+.nota-favorito{
+    padding: 1rem;
+
     display: flex;
 }
 
-.nota-filme{
-    display: flex;
-}
+
+
+
 
