@@ -69,7 +69,12 @@ function renderizaFilme(filme) {
     const informacaoFilme = document.createElement('div')
     informacaoFilme.classList.add('card-1')
     const tituloFilme = document.createElement('h4')
-    // tituloFilme
+    tituloFilme.innerText = titulo
+    informacaoFilme.appendChild(tituloFilme)
+
+     const sinopseFilme = document.createElement('div')
+     sinopseFilme.classList.add('card-2')
+     
 
 
 }
