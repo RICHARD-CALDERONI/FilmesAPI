@@ -1,6 +1,6 @@
 const moviesContainer = document.querySelector('.container-filme')
 
-const movies = [
+const filmes = [
     {
       imagem: 'https://img.elo7.com.br/product/original/3FBA809/big-poster-filme-batman-2022-90x60-cm-lo002-poster-batman.jpg',
       titulo: 'Batman',
@@ -28,8 +28,8 @@ const movie = `
                 <h4>Avatar</h4>                    
             </div>
 
-            <div class="card-2">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati illo totam facere magnam quibusdam fugiat, error, doloremque voluptatum animi debitis unde. Sed commodi fugiat voluptatibus consequatur quos. Reiciendis, eos in.
+            <div class="card-2">{
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati illo totam facere magnam quibusdam fugiat, error, doloremque voluptatum animi debitis unde. Sed commodi fugiat voluptatibus consequatur quos. Reiciendis, eos in}.
             </div>
         </div>
 `;
@@ -47,7 +47,7 @@ newMovie.innerHTML = movie
 moviesContainer.appendChild(newMovie)
 
 window.onload = function () {
-    movies.forEach(filme => renderizaFilme(filme))    
+  filmes.forEach(filme => renderizaFilme(filme))    
 }
 
 function renderizaFilme(filme) {
@@ -65,7 +65,6 @@ function renderizaFilme(filme) {
     containerImagemFilme.appendChild(imagemFilme)
 
 
-
     const informacaoFilme = document.createElement('div')
     informacaoFilme.classList.add('card-1')
     const tituloFilme = document.createElement('h4')
@@ -74,7 +73,5 @@ function renderizaFilme(filme) {
 
      const sinopseFilme = document.createElement('div')
      sinopseFilme.classList.add('card-2')
-     
-
-
+     sinopseFilme.innerText = descricao
 }

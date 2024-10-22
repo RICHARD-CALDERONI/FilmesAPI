@@ -61,18 +61,21 @@ h1 {
 .container-filme{
     background: var(--bg-container-movie);
     border-radius: 3%;
+    height: 100%;
     
     padding: 1rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .img-filme{
     border-radius: 100%;
     padding: 0 1rem;
     width: 20%;
+    height: 20%;
 }
 
 .card-1{
