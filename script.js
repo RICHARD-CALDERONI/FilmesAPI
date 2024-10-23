@@ -1,4 +1,6 @@
-const moviesContainer = document.querySelector('.container-filme')
+/* ÁREA CONTENDO TODA A PARTE LÓGICA, EXCETO AS FUNÇÕES DE BUSCA NA API (FETCH)*/
+
+const containerFilme = document.querySelector('.container-filme')
 
 const filmes = [
     {
@@ -34,18 +36,6 @@ const movie = `
         </div>
 `;
 
-/*Criando uma div e armazenando dentro de variável*/
-let newMovie = document.createElement('div');
-
-/*Adicionando a classe 'continer-filme' dentro da div criada*/
-newMovie.classList.add = ('container-filme');
-
-/*Injetando a variável onde está a estrutura html dentro da div criada*/
-newMovie.innerHTML = movie
-
-/*incluindo a variável tratada ao final da fila*/
-moviesContainer.appendChild(newMovie)
-
 window.onload = function () {
   filmes.forEach(filme => renderizaFilme(filme))    
 }
@@ -55,7 +45,7 @@ function renderizaFilme(filme) {
 
     const elementoFilme = document.createElement('div')
     elementoFilme.classList.add('container-filme')
-    moviesContainer.appendChild(elementoFilme)
+    containerFilme.appendChild(elementoFilme)
     
     const containerImagemFilme = document.createElement('div')
     containerImagemFilme.classList.add('img-filme')
@@ -63,6 +53,7 @@ function renderizaFilme(filme) {
     imagemFilme.src = imagem
     imagemFilme.alt = `${titulo} Poster`
     containerImagemFilme.appendChild(imagemFilme)
+    containerFilme.appendChild(containerImagemFilme)
 
 
     const informacaoFilme = document.createElement('div')
@@ -70,8 +61,10 @@ function renderizaFilme(filme) {
     const tituloFilme = document.createElement('h4')
     tituloFilme.innerText = titulo
     informacaoFilme.appendChild(tituloFilme)
+    containerFilme.appendChild(informacaoFilme)
 
      const sinopseFilme = document.createElement('div')
      sinopseFilme.classList.add('card-2')
      sinopseFilme.innerText = descricao
+     containerFilme.appendChild(sinopseFilme)
 }
