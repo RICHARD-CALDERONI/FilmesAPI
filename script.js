@@ -1,6 +1,6 @@
 /* ÁREA CONTENDO TODA A PARTE LÓGICA, EXCETO AS FUNÇÕES DE BUSCA NA API (FETCH)*/
 
-const containerFilme = document.querySelector('.container-filme')
+const containerFilme = document.querySelector('.testeFilme')
 
 const filmes = [
     {
@@ -67,4 +67,7 @@ function renderizaFilme(filme) {
      sinopseFilme.classList.add('card-2')
      sinopseFilme.innerText = descricao
      containerFilme.appendChild(sinopseFilme)
+
+
 }
+
