@@ -78,7 +78,7 @@ h1 {
 .container-filme .img-filme{
     width: 92px;
     height: 92px;
-    margin-right: 1rem;
+    margin-right: 0.3rem;
 }
 
 .container-filme .img-filme img{
@@ -100,7 +100,7 @@ h1 {
 
 
 .card-2{
-    max-width: 50%;
+    max-width: 60%;
     font-size: 1rem;
     width: auto;
 }

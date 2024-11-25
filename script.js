@@ -55,23 +55,18 @@ function renderizaFilme(filme) {
       divImg.appendChild(imagemFilme);
       elementoFilme.appendChild(divImg);
 
+      const informacaoFilme = document.createElement('div');
+      informacaoFilme.classList.add('card-1');
+      const tituloFilme = document.createElement('h4');
+      tituloFilme.innerText = titulo;
+      informacaoFilme.appendChild(tituloFilme);
+      elementoFilme.appendChild(informacaoFilme);
       
-/*       const containerImagemFilme = document.createElement('div')
-      containerImagemFilme.classList.add('img-filme')
-      const imagemFilme = document.createElement('img')
-      imagemFilme.src = imagem
-      imagemFilme.alt = `${titulo} Poster`
-      containerImagemFilme.appendChild(imagemFilme)
-      containerFilme.appendChild(containerImagemFilme)
-  
-  
-      const informacaoFilme = document.createElement('div')
-      informacaoFilme.classList.add('card-1')
-      const tituloFilme = document.createElement('h4')
-      tituloFilme.innerText = titulo
-      informacaoFilme.appendChild(tituloFilme)
-      containerFilme.appendChild(informacaoFilme)
-  
+      const sinopseFilme = document.createElement('div');
+      sinopseFilme.classList.add('card-2');
+      sinopseFilme.innerText = descricao;
+      elementoFilme.appendChild(sinopseFilme)
+      /*   
        const sinopseFilme = document.createElement('div')
        sinopseFilme.classList.add('card-2')
        sinopseFilme.innerText = descricao
