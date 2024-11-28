@@ -2,6 +2,8 @@
 
 const containerFilme = document.querySelector('.filmes')
 
+
+
 const filmes = [
     {
       imagem: 'https://img.elo7.com.br/product/original/3FBA809/big-poster-filme-batman-2022-90x60-cm-lo002-poster-batman.jpg',
@@ -21,26 +23,13 @@ const filmes = [
 ];
 
 
-/*Guardando a estrutura html dentro da variável móvie */
-/* const movie = `
-
-    <div class="container-filme">
-           <img class="img-filme" src="img/avatarpng.png" alt="">
-            <div class="card-1">
-                <h4>Avatar</h4>                    
-            </div>
-
-            <div class="card-2">{
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati illo totam facere magnam quibusdam fugiat, error, doloremque voluptatum animi debitis unde. Sed commodi fugiat voluptatibus consequatur quos. Reiciendis, eos in}.
-            </div>
-        </div>
-`; */
-
 window.onload = function () {
   filmes.forEach(filme => renderizaFilme(filme))    
 }
 
-function renderizaFilme(filme) {
+/* ***********ACESSANDO ATRAVÉS DO DOM***********
+
+ */function renderizaFilme(filme) {
     const { titulo, imagem, descricao} = filme
     
       const elementoFilme = document.createElement('div');
@@ -66,9 +55,4 @@ function renderizaFilme(filme) {
       sinopseFilme.classList.add('card-2');
       sinopseFilme.innerText = descricao;
       elementoFilme.appendChild(sinopseFilme)
-      /*   
-       const sinopseFilme = document.createElement('div')
-       sinopseFilme.classList.add('card-2')
-       sinopseFilme.innerText = descricao
-       containerFilme.appendChild(sinopseFilme)
- */       }
+}
