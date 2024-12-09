@@ -1,7 +1,6 @@
 /* ÁREA CONTENDO TODA A PARTE LÓGICA, EXCETO AS FUNÇÕES DE BUSCA NA API (FETCH)*/
 
-const containerFilme = document.querySelector('.filmes')
-
+const containerFilme = document.querySelector('.filmes');
 
 
 const filmes = [
