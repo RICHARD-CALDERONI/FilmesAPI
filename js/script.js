@@ -26,9 +26,9 @@ window.onload = function () {
   filmes.forEach(filme => renderizaFilme(filme))    
 }
 
-/* ***********ACESSANDO ATRAVÉS DO DOM***********
+/* ***********ACESSANDO ATRAVÉS DO DOM************/
 
- */function renderizaFilme(filme) {
+function renderizaFilme(filme) {
     const { titulo, imagem, descricao} = filme
     
       const elementoFilme = document.createElement('div');
