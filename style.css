@@ -44,13 +44,13 @@ h1 {
 
 }
 
-.input-container button{
+.input-container .botaoBusca{
     border-radius: 10%;
     margin-left: 1rem;
     background-color: white;
 }
 
-.input-filme {
+#input-filme {
     border-radius: 5%;
     height: 4rem;
     width: 50%;

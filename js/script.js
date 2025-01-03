@@ -1,20 +1,36 @@
-import { getFilmes } from "./fetchApi.js";
-import { apiKey } from "./key.js";
+import { API } from "./fetchApi.js";
 
 const containerFilme = document.querySelector('.filmes');
-const inputFilme = document.querySelector('input-filme');
-const botaoBuscar = document.getElementsByTagName('button')
+const inputFilme = document.getElementById('input-filme');
+const botaoProcurar = document.querySelector('.botaoBusca');
+
+console.log(inputFilme);
+
+botaoProcurar.addEventListener('click', procurarFilme);
 
 
+async function procurarFilme() {
+  const nomeFilme = inputFilme.value;
+  limparFilmes();
+  if (nomeFilme != '') {
+    const filmes = await API.buscaFilme(nomeFilme);
+    filmes.forEach(filme => renderizaFilme(filme))
+  } else {
+    todosFilmesPopulares();
+  }
+}
 
-async function getAllFilmes() {
-  const data = await getFilmes();
-  const filmes = data.results;
+function limparFilmes() {
+  containerFilme.innerHTML = '';
+}
+
+async function todosFilmesPopulares() {
+  const filmes = await API.filmesPopulares()
   filmes.forEach(filme => renderizaFilme(filme));
 }
 
 window.onload = function () {
-  getAllFilmes();
+  todosFilmesPopulares();
 }
 
 
