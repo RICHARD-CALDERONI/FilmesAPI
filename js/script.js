@@ -4,17 +4,26 @@ const containerFilme = document.querySelector('.filmes');
 const inputFilme = document.getElementById('input-filme');
 const botaoProcurar = document.querySelector('.botaoBusca');
 
-console.log(inputFilme);
 
 botaoProcurar.addEventListener('click', procurarFilme);
 
+window.addEventListener('click', (event) => {
+  const elementoClicado = event.target;
+  console.log('elemento clicado: ', elementoClicado);
+})
 
 async function procurarFilme() {
   const nomeFilme = inputFilme.value;
+  console.log('nome do filme: ',nomeFilme);
+  
   limparFilmes();
   if (nomeFilme != '') {
-    const filmes = await API.buscaFilme(nomeFilme);
-    filmes.forEach(filme => renderizaFilme(filme))
+    try{
+      const filmes = await API.buscaFilme(nomeFilme);
+      filmes.forEach(filme => renderizaFilme(filme))
+    } catch (error) {
+      console.error('Erro ao buscar Filmes: ', error);
+    }
   } else {
     todosFilmesPopulares();
   }
@@ -23,6 +32,7 @@ async function procurarFilme() {
 function limparFilmes() {
   containerFilme.innerHTML = '';
 }
+
 
 async function todosFilmesPopulares() {
   const filmes = await API.filmesPopulares()

@@ -15,6 +15,7 @@ async function buscaFilme(nomeFilme) {
 }
 
 
+
 export const API = {
     filmesPopulares,
     buscaFilme
