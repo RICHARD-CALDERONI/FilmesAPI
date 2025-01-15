@@ -33,15 +33,15 @@ function limparFilmes() {
   containerFilme.innerHTML = '';
 }
 
+window.onload = function () {
+  todosFilmesPopulares();
+}
 
 async function todosFilmesPopulares() {
   const filmes = await API.filmesPopulares()
   filmes.forEach(filme => renderizaFilme(filme));
 }
 
-window.onload = function () {
-  todosFilmesPopulares();
-}
 
 
 
