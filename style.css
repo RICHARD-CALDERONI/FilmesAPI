@@ -20,6 +20,7 @@ body{
     align-items: center;
 
     max-width: 1260px;
+    min-width: 320px;
     padding: 2rem;
     margin: 0 auto;
 
@@ -45,17 +46,20 @@ h1 {
 }
 
 .input-container .botaoBusca{
-    border-radius: 10%;
+    border-radius: 3%;
     margin-left: 1rem;
-    background-color: white;
+    border: transparent;
+    background: rgba(254, 254, 255, 0.89);
+    padding: 1rem;
+    cursor: pointer;
 }
 
-#input-filme {
-    border-radius: 5%;
+#input-filme{
     height: 4rem;
     width: 50%;
     border: transparent;
-    background: rgb(254, 254, 255);
+    background: rgba(254, 254, 255, 0.89);
+    padding: 1rem;
 }
 
 
